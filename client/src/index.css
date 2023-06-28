@@ -6,7 +6,7 @@ body {
 }
 
 .button {
-  
+
   background: transparent;
   background-color: #000c40 !important;
   box-shadow: none !important;
@@ -15,7 +15,7 @@ body {
   color: white !important;
   border-radius: 2px;
   padding: 10px 25px;
- 
+
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -28,8 +28,8 @@ body {
 
 
 .button:hover {
-   background: rgb(0,3,255);
-background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+  background: rgb(0, 3, 255);
+  background: linear-gradient(0deg, rgba(0, 3, 255, 1) 0%, rgba(2, 126, 251, 1) 100%);
 }
 
 input,
@@ -78,4 +78,12 @@ textarea:focus {
   color: #000c40 !important;
   border: 2px solid #000c40 !important;
   font-weight: bold;
+}
+
+.Error {
+  background: #000C40 !important;
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 1.5rem;
 }

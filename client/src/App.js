@@ -2,6 +2,7 @@ import "antd/dist/antd.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import { Spin } from "antd";
+import Error404 from "./Pages/404";
 
 const Login = lazy(() => import("./Pages/Login"));
 const Register = lazy(() => import("./Pages/Register"));
@@ -54,6 +55,14 @@ function App() {
             <Route
               path="/register"
               element={<Register />}
+            />
+            <Route
+              path="*"
+              element={
+                <ProtectedRoute>
+                  <Error404 />
+                </ProtectedRoute>
+              }
             />
           </Routes>
         </Suspense>
