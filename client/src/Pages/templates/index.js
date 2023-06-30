@@ -7,6 +7,7 @@ import Template2 from "./Template2";
 import Template3 from "./Template3";
 import { Button } from "antd";
 import "../../Resources/Stylesheets/templates.css";
+import Error404 from "../404";
 
 function Templates() {
   const componentRef = useRef();
@@ -27,20 +28,20 @@ function Templates() {
         return <Template3 />;
       }
       default: {
-        return <Template1 />;
+        return <Error404 />;
       }
     }
   };
   return (
     <DefaultLayout>
-      <div className="d-flex justify-content-end my-5 mx-5">
+      {params.id < 3 && <div className="d-flex justify-content-end my-5 mx-5"> {/*change this ones you increased templates*/}
         <Button className="backButton" onClick={() => navigate("/home")}>
           Back
         </Button>
         <Button className="mx-5 printButton" onClick={handlePrint}>
           Print
         </Button>
-      </div>
+      </div>}
       <div ref={componentRef}>{getTemplate()}</div>
     </DefaultLayout>
   );
